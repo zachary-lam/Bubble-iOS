@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  Bubble
 //
 //  Created by Zachary Lam on 2026-06-22.
