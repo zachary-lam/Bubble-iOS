@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="645"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="𓈒𓏸.°•Bubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-WE-w5T" userLabel="Title Label">
-                                                <rect key="frame" x="81.333333333333343" y="292.66666666666669" width="277.66666666666663" height="59.999999999999943"/>
+                                                <rect key="frame" x="81.333333333333343" y="292.66666666666669" width="277.66666666666663" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                                 <color key="textColor" name="CustomBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -50,6 +50,9 @@
                                                     <color key="titleColor" name="CustomBlue"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="sy0-YP-cIg" kind="show" id="ZKz-fI-iUm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doW-1p-wLk" userLabel="Login Button">
                                                 <rect key="frame" x="0.0" y="58" width="440" height="61"/>
@@ -63,6 +66,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="aP5-4t-WDU" kind="show" id="wRX-X6-E0c"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -91,13 +97,13 @@
         <!--Register View Controller-->
         <scene sceneID="4Fm-lo-kbf">
             <objects>
-                <viewController id="sy0-YP-cIg" userLabel="Register View Controller" sceneMemberID="viewController">
+                <viewController id="sy0-YP-cIg" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wO-fN-mAC">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="894"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ebp-Mt-1SC" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                                <rect key="frame" x="0.0" y="62" width="440" height="832"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x7T-Ad-7fu" userLabel="Textfield Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
@@ -145,7 +151,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-w4-huz" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="110" width="440" height="654"/>
+                                        <rect key="frame" x="0.0" y="110" width="440" height="722"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-vf-Eni" userLabel="Register Button">
                                                 <rect key="frame" x="166.66666666666666" y="10" width="106.99999999999997" height="48"/>
@@ -154,6 +160,10 @@
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" name="CustomBlue"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="registerPressed:" destination="sy0-YP-cIg" eventType="touchUpInside" id="DE7-gw-3xU"/>
+                                                    <segue destination="Ecg-Mc-sRn" kind="show" identifier="RegisterToChat" id="ha2-Ck-Fgb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -179,6 +189,11 @@
                             <constraint firstItem="goQ-ob-iz7" firstAttribute="trailing" secondItem="ebp-Mt-1SC" secondAttribute="trailing" id="vZP-vB-9BQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZLO-ym-hLl"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="sUT-Ha-79y" id="YXY-FP-Mdp"/>
+                        <outlet property="passwordTextfield" destination="rWX-kF-xbo" id="rwH-0E-Fj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-Pg-2Fv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,13 +202,13 @@
         <!--Login View Controller-->
         <scene sceneID="twZ-sq-Lho">
             <objects>
-                <viewController id="aP5-4t-WDU" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="aP5-4t-WDU" userLabel="Login View Controller" customClass="LoginViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKl-1z-fwD">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="894"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ASA-ZO-ObI" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                                <rect key="frame" x="0.0" y="62" width="440" height="832"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-kW-DeM" userLabel="Textfield Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
@@ -241,7 +256,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-ik-PV8" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="110" width="440" height="654"/>
+                                        <rect key="frame" x="0.0" y="110" width="440" height="722"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-zZ-KOI" userLabel="Login Button">
                                                 <rect key="frame" x="180.66666666666666" y="10" width="78.999999999999972" height="48"/>
@@ -250,6 +265,10 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" name="CustomLightBlue"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginPressed:" destination="aP5-4t-WDU" eventType="touchUpInside" id="n4X-zh-HTA"/>
+                                                    <segue destination="Ecg-Mc-sRn" kind="show" identifier="LoginToChat" id="yD2-jZ-IWu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -275,6 +294,11 @@
                             <constraint firstItem="KwX-V0-qDB" firstAttribute="trailing" secondItem="ASA-ZO-ObI" secondAttribute="trailing" id="dJM-UO-nID"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HZO-6v-mRt"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="P6G-QV-Hx2" id="Sqo-gj-rJo"/>
+                        <outlet property="passwordTextfield" destination="lld-2u-cLJ" id="gjC-38-UaE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tk4-vN-436" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,16 +307,16 @@
         <!--Chat View Controller-->
         <scene sceneID="vSS-04-jqx">
             <objects>
-                <viewController id="Ecg-Mc-sRn" userLabel="Chat View Controller" sceneMemberID="viewController">
+                <viewController id="Ecg-Mc-sRn" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEU-n6-YnJ">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="884"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-kR-qCQ" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                                <rect key="frame" x="0.0" y="62" width="440" height="822"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHR-e2-ahk">
-                                        <rect key="frame" x="0.0" y="0.0" width="440" height="709"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="767"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="cHN-UT-S8S">
@@ -306,7 +330,7 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-4Z-x28" userLabel="Message Stack">
-                                        <rect key="frame" x="0.0" y="714" width="440" height="50"/>
+                                        <rect key="frame" x="0.0" y="772" width="440" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-Zp-oxc" userLabel="Textfield View">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
@@ -335,6 +359,9 @@
                                                         <color key="tintColor" name="CustomBlue"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="paperplane.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="sendPressed:" destination="Ecg-Mc-sRn" eventType="touchUpInside" id="81u-NV-U9T"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -362,12 +389,20 @@
                             <constraint firstItem="IVQ-kR-qCQ" firstAttribute="top" secondItem="z0I-QA-uDa" secondAttribute="top" id="e7e-wg-IOF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="r5u-jw-c04"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="x9e-fz-Xof" id="Jhz-be-5qa"/>
+                        <outlet property="tableView" destination="nHR-e2-ahk" id="K68-HB-HaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrW-gp-WEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010.0000000000002" y="120.50209205020921"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yD2-jZ-IWu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <namedColor name="CustomBlue">
