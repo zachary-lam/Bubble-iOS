@@ -184,6 +184,102 @@
             </objects>
             <point key="canvasLocation" x="1029.7709923664122" y="-287.32394366197184"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="twZ-sq-Lho">
+            <objects>
+                <viewController id="aP5-4t-WDU" userLabel="Login View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GKl-1z-fwD">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ASA-ZO-ObI" userLabel="Main Stack">
+                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-kW-DeM" userLabel="Textfield Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW5-Q9-YyT" userLabel="Email View">
+                                                <rect key="frame" x="0.0" y="0.0" width="440" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-QV-Hx2" userLabel="Email Textfield">
+                                                        <rect key="frame" x="25" y="0.0" width="390" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="LKV-1q-fcW"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="CustomBlue"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="P6G-QV-Hx2" secondAttribute="trailing" constant="25" id="RYS-Vt-dC4"/>
+                                                    <constraint firstItem="P6G-QV-Hx2" firstAttribute="leading" secondItem="aW5-Q9-YyT" secondAttribute="leading" constant="25" id="jGc-Vv-Icq"/>
+                                                    <constraint firstItem="P6G-QV-Hx2" firstAttribute="centerY" secondItem="aW5-Q9-YyT" secondAttribute="centerY" id="sv0-fw-n6i"/>
+                                                    <constraint firstAttribute="height" constant="50" id="v9g-6C-Tp7"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-19-ULH" userLabel="Password View">
+                                                <rect key="frame" x="0.0" y="60" width="440" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lld-2u-cLJ" userLabel="Password Textfield">
+                                                        <rect key="frame" x="25" y="0.0" width="390" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Si9-Gk-sDe"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="CustomBlue"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="lld-2u-cLJ" firstAttribute="centerY" secondItem="Kaa-19-ULH" secondAttribute="centerY" id="Y1q-qr-hEm"/>
+                                                    <constraint firstItem="lld-2u-cLJ" firstAttribute="leading" secondItem="Kaa-19-ULH" secondAttribute="leading" constant="25" id="k4X-OR-Oid"/>
+                                                    <constraint firstAttribute="height" constant="50" id="sfK-jY-36B"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lld-2u-cLJ" secondAttribute="trailing" constant="25" id="vcw-ze-PEm"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-ik-PV8" userLabel="Button View">
+                                        <rect key="frame" x="0.0" y="110" width="440" height="654"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-zZ-KOI" userLabel="Login Button">
+                                                <rect key="frame" x="180.66666666666666" y="10" width="78.999999999999972" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" name="CustomLightBlue"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7Ix-zZ-KOI" firstAttribute="top" secondItem="dfE-ik-PV8" secondAttribute="top" constant="10" id="Ah8-37-VrP"/>
+                                            <constraint firstItem="7Ix-zZ-KOI" firstAttribute="centerX" secondItem="dfE-ik-PV8" secondAttribute="centerX" id="yeb-3H-8FG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dfE-ik-PV8" firstAttribute="leading" secondItem="ASA-ZO-ObI" secondAttribute="leading" id="6wc-yi-ydu"/>
+                                    <constraint firstItem="c9y-kW-DeM" firstAttribute="leading" secondItem="ASA-ZO-ObI" secondAttribute="leading" id="emO-wo-EfH"/>
+                                    <constraint firstAttribute="trailing" secondItem="c9y-kW-DeM" secondAttribute="trailing" id="sZJ-in-1Ke"/>
+                                    <constraint firstAttribute="trailing" secondItem="dfE-ik-PV8" secondAttribute="trailing" id="ty5-wD-xTC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KwX-V0-qDB"/>
+                        <color key="backgroundColor" name="CustomBlue"/>
+                        <constraints>
+                            <constraint firstItem="ASA-ZO-ObI" firstAttribute="leading" secondItem="KwX-V0-qDB" secondAttribute="leading" id="634-ZN-Yau"/>
+                            <constraint firstItem="KwX-V0-qDB" firstAttribute="bottom" secondItem="ASA-ZO-ObI" secondAttribute="bottom" id="NMw-BZ-HEN"/>
+                            <constraint firstItem="ASA-ZO-ObI" firstAttribute="top" secondItem="KwX-V0-qDB" secondAttribute="top" id="Thp-F4-yz2"/>
+                            <constraint firstItem="KwX-V0-qDB" firstAttribute="trailing" secondItem="ASA-ZO-ObI" secondAttribute="trailing" id="dJM-UO-nID"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tk4-vN-436" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="601"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="CustomBlue">
