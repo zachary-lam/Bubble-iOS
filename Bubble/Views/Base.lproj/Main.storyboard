@@ -162,7 +162,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="registerPressed:" destination="sy0-YP-cIg" eventType="touchUpInside" id="DE7-gw-3xU"/>
-                                                    <segue destination="Ecg-Mc-sRn" kind="show" identifier="RegisterToChat" id="ha2-Ck-Fgb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -193,6 +192,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="sUT-Ha-79y" id="YXY-FP-Mdp"/>
                         <outlet property="passwordTextfield" destination="rWX-kF-xbo" id="rwH-0E-Fj4"/>
+                        <segue destination="Ecg-Mc-sRn" kind="show" identifier="RegisterToChat" id="Vb6-es-TpL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-Pg-2Fv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -267,7 +267,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginPressed:" destination="aP5-4t-WDU" eventType="touchUpInside" id="n4X-zh-HTA"/>
-                                                    <segue destination="Ecg-Mc-sRn" kind="show" identifier="LoginToChat" id="yD2-jZ-IWu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -298,6 +297,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="P6G-QV-Hx2" id="Sqo-gj-rJo"/>
                         <outlet property="passwordTextfield" destination="lld-2u-cLJ" id="gjC-38-UaE"/>
+                        <segue destination="Ecg-Mc-sRn" kind="show" identifier="LoginToChat" id="dfD-Pp-2WV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tk4-vN-436" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -401,7 +401,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yD2-jZ-IWu"/>
+        <segue reference="dfD-Pp-2WV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
