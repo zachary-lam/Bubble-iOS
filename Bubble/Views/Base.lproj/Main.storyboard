@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqR-C1-yI9">
     <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sRB-W4-ZoL" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                                <rect key="frame" x="0.0" y="178" width="440" height="710"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-8L-2T5" userLabel="Title View">
-                                        <rect key="frame" x="0.0" y="0.0" width="440" height="645"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="591"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="𓈒𓏸.°•Bubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-WE-w5T" userLabel="Title Label">
-                                                <rect key="frame" x="81.333333333333343" y="292.66666666666669" width="277.66666666666663" height="60"/>
+                                                <rect key="frame" x="81.333333333333343" y="265.66666666666669" width="277.66666666666663" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                                 <color key="textColor" name="CustomBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-nu-62e" userLabel="Button Stack">
-                                        <rect key="frame" x="0.0" y="645" width="440" height="119"/>
+                                        <rect key="frame" x="0.0" y="591" width="440" height="119"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMn-dc-9ac" userLabel="Register Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="48"/>
@@ -89,21 +89,22 @@
                             <constraint firstItem="sRB-W4-ZoL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yUc-VC-PBK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jrh-jg-Ty7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="130.98591549295776"/>
+            <point key="canvasLocation" x="1030.909090909091" y="130.54393305439331"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="4Fm-lo-kbf">
             <objects>
                 <viewController id="sy0-YP-cIg" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wO-fN-mAC">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="894"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ebp-Mt-1SC" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="62" width="440" height="832"/>
+                                <rect key="frame" x="0.0" y="178" width="440" height="710"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x7T-Ad-7fu" userLabel="Textfield Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
@@ -151,7 +152,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-w4-huz" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="110" width="440" height="722"/>
+                                        <rect key="frame" x="0.0" y="110" width="440" height="600"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-vf-Eni" userLabel="Register Button">
                                                 <rect key="frame" x="166.66666666666666" y="10" width="106.99999999999997" height="48"/>
@@ -197,18 +198,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-Pg-2Fv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029.7709923664122" y="-287.32394366197184"/>
+            <point key="canvasLocation" x="1921.3636363636365" y="-287.44769874476987"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="twZ-sq-Lho">
             <objects>
                 <viewController id="aP5-4t-WDU" userLabel="Login View Controller" customClass="LoginViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKl-1z-fwD">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="894"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ASA-ZO-ObI" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="62" width="440" height="832"/>
+                                <rect key="frame" x="0.0" y="178" width="440" height="710"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-kW-DeM" userLabel="Textfield Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="110"/>
@@ -256,7 +257,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-ik-PV8" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="110" width="440" height="722"/>
+                                        <rect key="frame" x="0.0" y="110" width="440" height="600"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-zZ-KOI" userLabel="Login Button">
                                                 <rect key="frame" x="180.66666666666666" y="10" width="78.999999999999972" height="48"/>
@@ -302,21 +303,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tk4-vN-436" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="601"/>
+            <point key="canvasLocation" x="1921.3636363636365" y="600.62761506276149"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="vSS-04-jqx">
             <objects>
                 <viewController id="Ecg-Mc-sRn" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEU-n6-YnJ">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="884"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-kR-qCQ" userLabel="Main Stack">
-                                <rect key="frame" x="0.0" y="62" width="440" height="822"/>
+                                <rect key="frame" x="0.0" y="178" width="440" height="710"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHR-e2-ahk">
-                                        <rect key="frame" x="0.0" y="0.0" width="440" height="767"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="655"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="cHN-UT-S8S">
@@ -330,7 +331,7 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3N-4Z-x28" userLabel="Message Stack">
-                                        <rect key="frame" x="0.0" y="772" width="440" height="50"/>
+                                        <rect key="frame" x="0.0" y="660" width="440" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-Zp-oxc" userLabel="Textfield View">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
@@ -397,7 +398,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrW-gp-WEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010.0000000000002" y="120.50209205020921"/>
+            <point key="canvasLocation" x="2901.818181818182" y="120.50209205020921"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SKT-sF-9V7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KqR-C1-yI9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XGe-ZM-XAN">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aT8-z5-H4I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVk-D3-buf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.09090909090909" y="130.54393305439331"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
