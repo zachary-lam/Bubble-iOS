@@ -13,6 +13,10 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
+    override func viewDidLoad() {
+        navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func sendPressed(_ sender: UIButton) {
     }
     
