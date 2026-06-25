@@ -23,16 +23,25 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-8L-2T5" userLabel="Title View">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="591"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="𓈒𓏸.°•Bubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-WE-w5T" userLabel="Title Label">
-                                                <rect key="frame" x="81.333333333333343" y="265.66666666666669" width="277.66666666666663" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="𓈒𓏸.°•Bubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-WE-w5T" userLabel="Title Label" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                                <rect key="frame" x="90" y="260" width="260.33333333333331" height="71"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
                                                 <color key="textColor" name="CustomBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="𓈒𓏸.°•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWJ-aX-P1Y" userLabel="Title Label Secondary" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                                <rect key="frame" x="90" y="260" width="104.33333333333331" height="71"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
+                                                <color key="textColor" name="CustomLightBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tWJ-aX-P1Y" secondAttribute="trailing" constant="245.66999999999999" id="4wg-SA-2Pr"/>
                                             <constraint firstItem="9Bp-WE-w5T" firstAttribute="centerY" secondItem="W7P-8L-2T5" secondAttribute="centerY" id="5bF-FU-c9E"/>
                                             <constraint firstItem="9Bp-WE-w5T" firstAttribute="centerX" secondItem="W7P-8L-2T5" secondAttribute="centerX" id="8aU-5b-ncP"/>
+                                            <constraint firstItem="tWJ-aX-P1Y" firstAttribute="centerY" secondItem="W7P-8L-2T5" secondAttribute="centerY" id="D06-xj-tQm"/>
+                                            <constraint firstItem="tWJ-aX-P1Y" firstAttribute="leading" secondItem="9Bp-WE-w5T" secondAttribute="leading" id="QCr-tY-pwK"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-nu-62e" userLabel="Button Stack">
@@ -90,6 +99,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jrh-jg-Ty7"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="9Bp-WE-w5T" id="roj-iL-r3e"/>
+                        <outlet property="titleLabelSecondary" destination="tWJ-aX-P1Y" id="sih-n5-PmF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -437,7 +450,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.0" green="0.76470588240000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.76470588235294112" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

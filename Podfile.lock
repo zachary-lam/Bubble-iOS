@@ -1,16 +1,20 @@
 PODS:
+  - AYTypeWriter (1.0.0)
   - CLTypingLabel (0.4.0)
 
 DEPENDENCIES:
+  - AYTypeWriter
   - CLTypingLabel (~> 0.4.0)
 
 SPEC REPOS:
   trunk:
+    - AYTypeWriter
     - CLTypingLabel
 
 SPEC CHECKSUMS:
+  AYTypeWriter: ed0803649acb59d93a13126fd415e83a4ffff892
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
 
-PODFILE CHECKSUM: 739974edbd0f565e04d21c8812441479956bf6ac
+PODFILE CHECKSUM: e98138bca7a04e0439b0024c7fa62585b8b03ab4
 
 COCOAPODS: 1.16.2

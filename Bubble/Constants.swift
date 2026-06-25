@@ -6,6 +6,7 @@
 //
 
 struct K {
+    static let appName = "𓈒𓏸.°•Bubble"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
     

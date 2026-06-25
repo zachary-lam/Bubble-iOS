@@ -7,5 +7,6 @@ target 'Bubble' do
 
   # Pods for Bubble
   pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'AYTypeWriter' 
 
 end
