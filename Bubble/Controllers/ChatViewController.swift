@@ -16,16 +16,13 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "user1@email.com", body: "lorem ipsum"),
-        Message(sender: "user2@email.com", body: "another lorem ipsum"),
-        Message(sender: "user2@email.com", body: "the third lorem ipsum")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = K.appName
         navigationItem.hidesBackButton = true
+        loadMessages()
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
     }
@@ -59,6 +56,36 @@ class ChatViewController: UIViewController {
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
+    }
+    
+    func loadMessages() {
+        db.collection(K.FireStore.collectionName)
+            .addSnapshotListener { querySnapshot, error in
+                
+                self.messages = []
+                
+                if let snapshot = querySnapshot?.documents {
+                    for doc in snapshot {
+                        let data = doc.data()
+                        if let sender = data[K.FireStore.senderField] as? String, let body = data[K.FireStore.bodyField] as? String {
+                            let newMessage = Message(sender: sender, body: body)
+                            
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                            }
+                        }
+                    }
+                } else {
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                }
+            }
     }
 }
 
