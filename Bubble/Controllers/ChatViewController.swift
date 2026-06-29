@@ -28,15 +28,24 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        // Source - https://stackoverflow.com/a/78750754
+        // Posted by JeremyP
+        // Retrieved 2026-06-17, License - CC BY-SA 4.0
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = formatter.string(from: today)
+        let formattedDate = formatter.date(from: stringDate)
+        
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
             Task {
                 // Add a new document with a generated ID
                 do {
-                    let ref = try await db.collection(K.FireStore.collectionName).addDocument(data: [
+                    let _ = try await db.collection(K.FireStore.collectionName).addDocument(data: [
                         K.FireStore.senderField: messageSender,
                         K.FireStore.bodyField: messageBody,
+                        K.FireStore.dateField: formattedDate!
                     ])
-                    print("Document added with ID: \(ref.documentID)")
                 } catch {
                     print("Error adding document: \(error)")
                 }
@@ -60,6 +69,7 @@ class ChatViewController: UIViewController {
     
     func loadMessages() {
         db.collection(K.FireStore.collectionName)
+            .order(by: "date")
             .addSnapshotListener { querySnapshot, error in
                 
                 self.messages = []
