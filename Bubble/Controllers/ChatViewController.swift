@@ -7,11 +7,14 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    
+    let db = Firestore.firestore()
     
     var messages: [Message] = [
         Message(sender: "user1@email.com", body: "lorem ipsum"),
@@ -28,18 +31,33 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            Task {
+                // Add a new document with a generated ID
+                do {
+                    let ref = try await db.collection("messages").addDocument(data: [
+                        "email": messageSender,
+                        "message": messageBody,
+                    ])
+                    print("Document added with ID: \(ref.documentID)")
+                } catch {
+                    print("Error adding document: \(error)")
+                }
+            }
+            
+        }
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         do {
-          try Auth.auth().signOut()
+            try Auth.auth().signOut()
             // Source - https://stackoverflow.com/a/34325813
             // Posted by Rene Ramirez
             // Retrieved 2026-06-25, License - CC BY-SA 3.0
             self.navigationController?.popToRootViewController(animated: true)
-
+            
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
     }
 }
