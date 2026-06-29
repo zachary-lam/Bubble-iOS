@@ -18,4 +18,10 @@ struct K {
         static let yellow = "CustomYellow"
         static let lightYellow = "CustomLightYellow"
     }
+    
+    struct FireStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+    }
 }

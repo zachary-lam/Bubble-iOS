@@ -35,9 +35,9 @@ class ChatViewController: UIViewController {
             Task {
                 // Add a new document with a generated ID
                 do {
-                    let ref = try await db.collection("messages").addDocument(data: [
-                        "email": messageSender,
-                        "message": messageBody,
+                    let ref = try await db.collection(K.FireStore.collectionName).addDocument(data: [
+                        K.FireStore.senderField: messageSender,
+                        K.FireStore.bodyField: messageBody,
                     ])
                     print("Document added with ID: \(ref.documentID)")
                 } catch {
