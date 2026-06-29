@@ -9,6 +9,7 @@ struct K {
     static let appName = "𓈒𓏸.°•Bubble"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
+    static let cellIdentifier = "ReusableCell"
     
     struct AppColors {
         static let blue = "CustomBlue"
